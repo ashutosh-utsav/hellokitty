@@ -215,7 +215,7 @@ const Home = () => {
     { name: 'Cosmic Trail', abbr: 'CT', color: 'from-purple-600 to-purple-800' },
     { name: 'World Window', abbr: 'WW', color: 'from-green-600 to-green-800' },
     { name: 'GeoPolitics Desk', abbr: 'GPD', color: 'from-red-600 to-red-800' },
-    { name: 'Talks & Ties', abbr: 'T&T', color: 'from-yellow-600 to-yellow-800' },
+    { name: 'Talks & Ties', abbr: 'T&T', color: 'from-cyan-600 to-cyan-800' },
     { name: 'Global Game', abbr: 'GG', color: 'from-indigo-600 to-indigo-800' },
     { name: 'Think Tank', abbr: 'TT', color: 'from-teal-600 to-teal-800' },
     { name: 'Congress', abbr: 'CG', color: 'from-gray-600 to-gray-800' },
@@ -238,7 +238,7 @@ const Home = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 lg:p-8 text-white">
-                  <span className="inline-block bg-gold-600 text-navy-900 px-3 py-1 rounded text-xs sm:text-sm font-bold mb-2 sm:mb-3">
+                  <span className="inline-block bg-primary-500 text-white px-3 py-1 rounded text-xs sm:text-sm font-bold mb-2 sm:mb-3">
                     FEATURED
                   </span>
                   <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-2 sm:mb-3 leading-tight">
@@ -271,12 +271,12 @@ const Home = () => {
                           alt={article.title}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute top-2 left-2 bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-bold">
+                        <span className="absolute top-2 left-2 bg-primary-500 text-white px-2 py-1 rounded text-xs font-bold">
                           {article.category}
                         </span>
                       </div>
                       <div className="p-3 sm:p-4">
-                        <h3 className="text-sm sm:text-base font-bold text-white mb-2 line-clamp-2 group-hover:text-gold-400 transition">
+                        <h3 className="text-sm sm:text-base font-bold text-white mb-2 line-clamp-2 group-hover:text-primary-400 transition">
                           {article.title}
                         </h3>
                         <div className="flex items-center text-xs text-gray-400">
@@ -301,10 +301,10 @@ const Home = () => {
                     />
                   </div>
                   <div className="flex-1 py-4 pr-4 flex flex-col justify-center">
-                    <span className="inline-block text-xs font-semibold text-gold-600 mb-2">
+                    <span className="inline-block text-xs font-semibold text-primary-600 mb-2">
                       {featuredNews[3].category}
                     </span>
-                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition">
                       {featuredNews[3].title}
                     </h3>
                     <p className="text-sm text-gray-600 mb-3 line-clamp-2 hidden sm:block">
@@ -327,7 +327,7 @@ const Home = () => {
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 sm:mb-8 gap-3">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Top Stories</h2>
-          <Link to="/category" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+          <Link to="/category" className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-sm sm:text-base">
             View All
             <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
           </Link>
@@ -343,7 +343,7 @@ const Home = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {article.category}
                   </span>
                 </div>
@@ -354,13 +354,13 @@ const Home = () => {
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <Link
                   to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
                   <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -384,20 +384,20 @@ const Home = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {article.category}
                   </span>
                 </div>
               </div>
               <div className="p-4">
                 <div className="text-xs text-gray-500 mb-2">{article.date}</div>
-                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <Link
                   to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
                   <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -412,7 +412,7 @@ const Home = () => {
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="flex justify-between items-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Air World</h2>
-          <Link to="/category/air-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+          <Link to="/category/air-world" className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-sm sm:text-base">
             View All
             <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
           </Link>
@@ -427,7 +427,7 @@ const Home = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {article.category}
                   </span>
                 </div>
@@ -438,13 +438,13 @@ const Home = () => {
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <Link
                   to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
                   <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -460,7 +460,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-6 sm:mb-8">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Sea World</h2>
-            <Link to="/category/sea-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+            <Link to="/category/sea-world" className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-sm sm:text-base">
               View All
               <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
             </Link>
@@ -475,7 +475,7 @@ const Home = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                    <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                    <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                       {article.category}
                     </span>
                   </div>
@@ -486,13 +486,13 @@ const Home = () => {
                     <span className="mx-2">•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                  <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                     {article.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                   <Link
                     to={`/article/${article.id}`}
-                    className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                    className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                   >
                     Read More
                     <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -508,7 +508,7 @@ const Home = () => {
       <section className="container mx-auto px-4 py-12 md:py-16">
         <div className="flex justify-between items-center mb-6 sm:mb-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Aero World</h2>
-          <Link to="/category/aero-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+          <Link to="/category/aero-world" className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-sm sm:text-base">
             View All
             <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
           </Link>
@@ -523,7 +523,7 @@ const Home = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {article.category}
                   </span>
                 </div>
@@ -534,13 +534,13 @@ const Home = () => {
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <Link
                   to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
                   <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -564,7 +564,7 @@ const Home = () => {
                 to={`/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
                 className={`bg-gradient-to-br ${category.color} rounded-lg p-4 sm:p-5 md:p-6 text-white hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group`}
               >
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-gold-200 group-hover:text-gold-100 transition">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 sm:mb-3 text-white/90 group-hover:text-white transition">
                   {category.abbr}
                 </div>
                 <h3 className="font-semibold text-xs sm:text-sm md:text-base leading-tight">{category.name}</h3>

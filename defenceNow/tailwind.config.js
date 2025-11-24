@@ -7,41 +7,44 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Primary Blue - DEFENCE color from logo (#013D8D)
         primary: {
-          50: '#f0f5ff',
-          100: '#e0ebff',
-          200: '#c7d7fe',
-          300: '#a4bcfd',
-          400: '#8098f9',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
+          50: '#e6f0f9',
+          100: '#cce1f3',
+          200: '#99c3e7',
+          300: '#66a5db',
+          400: '#3387cf',
+          500: '#013D8D',  // Exact DEFENCE color from logo
+          600: '#01357d',
+          700: '#012d6e',
+          800: '#01255e',
+          900: '#011d4f',
         },
+        // Navy/Dark Blue - WINGS color from logo (#021E42)
         navy: {
-          50: '#f4f6f9',
-          100: '#e9edf3',
-          200: '#d3dbe7',
-          300: '#b3c1d4',
-          400: '#8fa2bd',
-          500: '#6b7f99',
-          600: '#5a6a7f',
-          700: '#4a5568',
-          800: '#2d3748',
-          900: '#1a202c',
+          50: '#e6e9ed',
+          100: '#ccd3db',
+          200: '#99a7b7',
+          300: '#667b93',
+          400: '#334f6f',
+          500: '#02274b',
+          600: '#021E42',  // Exact WINGS color from logo
+          700: '#021939',
+          800: '#021430',
+          900: '#020f27',
         },
-        gold: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#facc15',
-          500: '#eab308',
-          600: '#ca8a04',
-          700: '#a16207',
-          800: '#854d0e',
-          900: '#713f12',
+        // Accent color (keeping gold as accent, you can change this)
+        accent: {
+          50: '#fef3e2',
+          100: '#fde5c4',
+          200: '#fbcb89',
+          300: '#f9b14e',
+          400: '#f79713',
+          500: '#e67e00',  // Warm accent
+          600: '#b86400',
+          700: '#8a4b00',
+          800: '#5c3200',
+          900: '#2e1900',
         },
       },
       fontFamily: {
