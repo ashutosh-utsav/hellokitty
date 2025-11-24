@@ -21,37 +21,46 @@ const Header = () => {
   ];
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       {/* Top Bar */}
-      <div className="bg-navy-900 text-white py-2">
+      <div className="bg-gradient-to-r from-navy-900 to-primary-600 text-white py-2 border-b border-navy-800" style={{ backgroundColor: '#021E42' }}>
         <div className="container mx-auto px-4 flex justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center space-x-2 sm:space-x-4">
             <span className="hidden md:inline">{new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span>
             <span className="md:hidden">{new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
           </div>
           <div className="flex items-center space-x-3 sm:space-x-4">
-            <a href="#" className="hover:text-gold-400 transition">Subscribe</a>
-            <a href="#" className="hover:text-gold-400 transition hidden sm:inline">Newsletter</a>
+            <a href="#" className="hover:text-primary-400 transition">Subscribe</a>
+            <a href="#" className="hover:text-primary-400 transition hidden sm:inline">Newsletter</a>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <div className="text-xl sm:text-2xl font-bold">
-              <span className="text-navy-900">Defence</span>
-              <span className="text-gold-600">Now</span>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="/defence-wings-logo.png" 
+              alt="Defence Wings" 
+              className="h-10 sm:h-12 w-auto object-contain transition-all duration-200 hover:scale-105"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'block';
+              }}
+            />
+            <div className="text-xl sm:text-2xl font-bold tracking-tight" style={{ display: 'none' }}>
+              <span className="text-primary-500 group-hover:text-primary-600 transition-colors" style={{ color: '#013D8D' }}>Defence</span>
+              <span className="text-navy-600 group-hover:text-navy-700 transition-colors" style={{ color: '#021E42' }}>Wings</span>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-6">
+          {/* Desktop Navigation - Pushed to right with smaller text */}
+          <nav className="hidden xl:flex items-center space-x-3 2xl:space-x-4 ml-auto">
             {/* Defence Frontline with Dropdown */}
             <div className="relative group">
-              <button className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition flex items-center tracking-wide uppercase">
+              <button className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition flex items-center tracking-wide uppercase">
                 Defence Frontline
                 <svg className="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -61,19 +70,19 @@ const Header = () => {
                 <div className="py-1">
                   <Link
                     to="/category/sea-world"
-                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-gold-50 hover:text-gold-600 transition"
+                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-primary-50 hover:text-primary-600 transition"
                   >
                     Sea World
                   </Link>
                   <Link
                     to="/category/air-world"
-                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-gold-50 hover:text-gold-600 transition"
+                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-primary-50 hover:text-primary-600 transition"
                   >
                     Air World
                   </Link>
                   <Link
                     to="/category/aero-world"
-                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-gold-50 hover:text-gold-600 transition"
+                    className="block px-4 py-2 text-xs text-navy-700 hover:bg-primary-50 hover:text-primary-600 transition"
                   >
                     Aero World
                   </Link>
@@ -82,28 +91,28 @@ const Header = () => {
             </div>
 
             {/* Other Categories */}
-            <Link to="/category/cosmic-trail" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/cosmic-trail" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Cosmic Trail
             </Link>
-            <Link to="/category/world-window" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/world-window" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               World Window
             </Link>
-            <Link to="/category/geopolitics-desk" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/geopolitics-desk" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               GeoPolitics Desk
             </Link>
-            <Link to="/category/talks-ties" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/talks-ties" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Talks & Ties
             </Link>
-            <Link to="/category/global-game" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/global-game" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Global Game
             </Link>
-            <Link to="/category/think-tank" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/think-tank" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Think Tank
             </Link>
-            <Link to="/category/congress" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/congress" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Congress
             </Link>
-            <Link to="/category/truth-line" className="text-navy-800 hover:text-gold-600 text-xs 2xl:text-sm font-medium transition tracking-wide uppercase">
+            <Link to="/category/truth-line" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Truth Line
             </Link>
           </nav>
@@ -111,7 +120,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden text-navy-900 hover:text-gold-600 transition"
+            className="xl:hidden text-navy-600 hover:text-primary-500 transition ml-4"
           >
             {mobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6" />
@@ -133,21 +142,21 @@ const Header = () => {
                 <div className="pl-3 space-y-1">
                   <Link
                     to="/category/sea-world"
-                    className="block py-2 text-xs text-navy-600 hover:text-gold-600 hover:bg-gold-50 px-2 rounded transition"
+                    className="block py-2 text-xs text-navy-600 hover:text-primary-600 hover:bg-primary-50 px-2 rounded transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Sea World
                   </Link>
                   <Link
                     to="/category/air-world"
-                    className="block py-2 text-xs text-navy-600 hover:text-gold-600 hover:bg-gold-50 px-2 rounded transition"
+                    className="block py-2 text-xs text-navy-600 hover:text-primary-600 hover:bg-primary-50 px-2 rounded transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Air World
                   </Link>
                   <Link
                     to="/category/aero-world"
-                    className="block py-2 text-xs text-navy-600 hover:text-gold-600 hover:bg-gold-50 px-2 rounded transition"
+                    className="block py-2 text-xs text-navy-600 hover:text-primary-600 hover:bg-primary-50 px-2 rounded transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     Aero World
@@ -158,56 +167,56 @@ const Header = () => {
               {/* Other Categories */}
               <Link
                 to="/category/cosmic-trail"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Cosmic Trail
               </Link>
               <Link
                 to="/category/world-window"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 World Window
               </Link>
               <Link
                 to="/category/geopolitics-desk"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 GeoPolitics Desk
               </Link>
               <Link
                 to="/category/talks-ties"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Talks & Ties
               </Link>
               <Link
                 to="/category/global-game"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Global Game
               </Link>
               <Link
                 to="/category/think-tank"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Think Tank
               </Link>
               <Link
                 to="/category/congress"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Congress
               </Link>
               <Link
                 to="/category/truth-line"
-                className="block py-2.5 text-navy-800 hover:text-gold-600 hover:bg-gold-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Truth Line

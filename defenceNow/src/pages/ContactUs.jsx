@@ -87,8 +87,8 @@ const ContactUs = () => {
           {contactInfo.map((info, idx) => (
             <div key={idx} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
               <div className="flex justify-center mb-4">
-                <div className="bg-gold-100 rounded-full p-4">
-                  <info.icon className="h-8 w-8 text-gold-600" />
+                <div className="bg-primary-100 rounded-full p-4">
+                  <info.icon className="h-8 w-8 text-primary-600" />
                 </div>
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-2">{info.title}</h3>
@@ -117,7 +117,7 @@ const ContactUs = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="John Doe"
                   />
                 </div>
@@ -132,7 +132,7 @@ const ContactUs = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -148,7 +148,7 @@ const ContactUs = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                   placeholder="What is this regarding?"
                 />
               </div>
@@ -163,13 +163,13 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent resize-none"
                   placeholder="Your message here..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full md:w-auto px-8 py-4 bg-gold-600 hover:bg-gold-700 text-navy-900 font-semibold rounded-lg transition transform hover:scale-105"
+                className="w-full md:w-auto px-8 py-4 bg-primary-600 hover:bg-primary-700 text-navy-900 font-semibold rounded-lg transition transform hover:scale-105"
               >
                 Send Message
               </button>
@@ -186,7 +186,7 @@ const ContactUs = () => {
             {departments.map((dept, idx) => (
               <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
                 <h3 className="text-lg font-bold text-navy-900 mb-2">{dept.title}</h3>
-                <a href={`mailto:${dept.email}`} className="text-gold-600 hover:text-gold-700 font-medium text-sm mb-3 block">
+                <a href={`mailto:${dept.email}`} className="text-primary-600 hover:text-primary-700 font-medium text-sm mb-3 block">
                   {dept.email}
                 </a>
                 <p className="text-gray-600 text-sm">{dept.description}</p>

@@ -50,7 +50,7 @@ const Category = () => {
       name: 'Talks & Ties',
       description: 'Diplomatic relations, international summits, and defense cooperation',
       abbr: 'T&T',
-      color: 'from-yellow-600 to-yellow-800'
+      color: 'from-cyan-600 to-cyan-800'
     },
     'global-game': {
       name: 'Global Game',
@@ -162,7 +162,7 @@ const Category = () => {
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group"
               >
                 <div className={`bg-gradient-to-br ${category.color} p-8 text-white`}>
-                  <div className="text-4xl font-bold mb-4 text-gold-200">{category.abbr}</div>
+                  <div className="text-4xl font-bold mb-4 text-white/90">{category.abbr}</div>
                   <h3 className="text-2xl font-bold mb-2">{category.name}</h3>
                 </div>
                 <div className="p-6">
@@ -177,7 +177,7 @@ const Category = () => {
                       ))}
                     </div>
                   )}
-                  <div className="mt-6 flex items-center text-gold-600 font-semibold group-hover:text-gold-700">
+                  <div className="mt-6 flex items-center text-primary-600 font-semibold group-hover:text-primary-700">
                     View Articles
                     <ChevronRightIcon className="ml-1 h-5 w-5" />
                   </div>
@@ -220,7 +220,7 @@ const Category = () => {
             </div>
 
             <div className="flex items-center mb-6">
-              <div className="text-5xl md:text-6xl font-bold mr-4 text-gold-200">{currentCategory?.abbr}</div>
+              <div className="text-5xl md:text-6xl font-bold mr-4 text-white/90">{currentCategory?.abbr}</div>
               <div>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">{displayName}</h1>
                 <p className="text-base md:text-lg lg:text-xl text-gray-300">{displayDescription}</p>
@@ -241,11 +241,11 @@ const Category = () => {
                 href={`/category/defence-frontline/${sub.slug}`}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 group"
               >
-                <h3 className="text-xl font-bold text-navy-900 mb-2 group-hover:text-gold-600">
+                <h3 className="text-xl font-bold text-navy-900 mb-2 group-hover:text-primary-600">
                   {sub.name}
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">{sub.description}</p>
-                <div className="flex items-center text-gold-600 font-semibold">
+                <div className="flex items-center text-primary-600 font-semibold">
                   View Articles
                   <ChevronRightIcon className="ml-1 h-4 w-4" />
                 </div>
@@ -260,7 +260,7 @@ const Category = () => {
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl font-bold text-navy-900">Latest Articles</h2>
           <div className="flex items-center space-x-4">
-            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500">
+            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500">
               <option>Most Recent</option>
               <option>Most Popular</option>
               <option>Most Commented</option>
@@ -278,7 +278,7 @@ const Category = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                  <span className="bg-primary-500 text-white px-2 py-1 rounded text-xs font-semibold">
                     {displayName}
                   </span>
                 </div>
@@ -289,13 +289,13 @@ const Category = () => {
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-primary-600 transition leading-tight">
                   {article.title}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <a
                   href={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  className="text-primary-600 hover:text-primary-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
                   <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
@@ -311,7 +311,7 @@ const Category = () => {
             <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
               Previous
             </button>
-            <button className="px-4 py-2 bg-gold-600 text-white rounded-lg font-semibold">1</button>
+            <button className="px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold">1</button>
             <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">2</button>
             <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">3</button>
             <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
@@ -332,11 +332,11 @@ const Category = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-lg text-navy-900 focus:outline-none focus:ring-2 focus:ring-gold-400"
+              className="flex-1 px-6 py-3 rounded-lg text-navy-900 focus:outline-none focus:ring-2 focus:ring-primary-400"
             />
             <button
               type="submit"
-              className="px-8 py-3 bg-gold-600 hover:bg-gold-700 text-navy-900 font-semibold rounded-lg transition"
+              className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-navy-900 font-semibold rounded-lg transition"
             >
               Subscribe
             </button>

@@ -120,7 +120,7 @@ const AboutUs = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-navy-900 mb-1">{member.name}</h3>
-                <p className="text-gold-600 font-semibold mb-3">{member.role}</p>
+                <p className="text-primary-600 font-semibold mb-3">{member.role}</p>
                 <p className="text-gray-600 text-sm">{member.bio}</p>
               </div>
             </div>
@@ -134,27 +134,27 @@ const AboutUs = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">What We Cover</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">Defence Frontline</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">Defence Frontline</h3>
               <p className="text-gray-300">Comprehensive coverage of naval, air, and aerospace operations worldwide.</p>
             </div>
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">Cosmic Trail</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">Cosmic Trail</h3>
               <p className="text-gray-300">Space defence, satellite warfare, and orbital security developments.</p>
             </div>
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">GeoPolitics Desk</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">GeoPolitics Desk</h3>
               <p className="text-gray-300">Strategic analysis of global power dynamics and regional conflicts.</p>
             </div>
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">Think Tank</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">Think Tank</h3>
               <p className="text-gray-300">Expert insights, policy recommendations, and strategic forecasting.</p>
             </div>
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">Global Game</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">Global Game</h3>
               <p className="text-gray-300">Arms trade, defense economics, and international security cooperation.</p>
             </div>
             <div className="bg-navy-800 rounded-lg p-6">
-              <h3 className="text-xl font-bold mb-3 text-gold-400">Truth Line</h3>
+              <h3 className="text-xl font-bold mb-3 text-primary-400">Truth Line</h3>
               <p className="text-gray-300">Fact-checking, verification, and countering misinformation in defence reporting.</p>
             </div>
           </div>
@@ -170,7 +170,7 @@ const AboutUs = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block px-8 py-4 bg-gold-600 hover:bg-gold-700 text-navy-900 font-semibold rounded-lg transition transform hover:scale-105"
+            className="inline-block px-8 py-4 bg-primary-600 hover:bg-primary-700 text-navy-900 font-semibold rounded-lg transition transform hover:scale-105"
           >
             Contact Us
           </a>
