@@ -23,7 +23,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-navy-900">Defence</span>
-              <span className="text-gold-600">Now</span>
+              <span className="text-gold-600">Wings</span>
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed">
               Your trusted source for comprehensive defence news, geopolitical analysis, 
@@ -100,7 +100,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-300 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} DefenceNow. All rights reserved.
+            © {currentYear} Defence Wings. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-500 hover:text-gold-600 transition">
