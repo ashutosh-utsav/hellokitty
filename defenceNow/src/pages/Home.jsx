@@ -93,6 +93,123 @@ const Home = () => {
     }
   ];
 
+  const airWorldNews = [
+    {
+      id: 11,
+      title: 'Fifth-Generation Fighter Jets: Combat Readiness Assessment',
+      category: 'Air World',
+      excerpt: 'Comprehensive evaluation of latest fighter aircraft performance in modern combat scenarios.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Fighter+Jets&font=roboto',
+      date: 'November 20, 2025',
+      readTime: '9 min read'
+    },
+    {
+      id: 12,
+      title: 'Advanced Aerial Refueling Technology Enhances Range',
+      category: 'Air World',
+      excerpt: 'New refueling systems extend operational capabilities of modern air forces.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Aerial+Refueling&font=roboto',
+      date: 'November 19, 2025',
+      readTime: '7 min read'
+    },
+    {
+      id: 13,
+      title: 'Stealth Bomber Program Reaches New Milestone',
+      category: 'Air World',
+      excerpt: 'Next-generation stealth aircraft demonstrates unprecedented penetration capabilities.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Stealth+Bomber&font=roboto',
+      date: 'November 18, 2025',
+      readTime: '8 min read'
+    },
+    {
+      id: 14,
+      title: 'Air Defense Systems Integration: Multi-Layer Protection',
+      category: 'Air World',
+      excerpt: 'Integrated air defense networks provide comprehensive coverage against aerial threats.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Air+Defense&font=roboto',
+      date: 'November 17, 2025',
+      readTime: '6 min read'
+    }
+  ];
+
+  const seaWorldNews = [
+    {
+      id: 15,
+      title: 'Advanced Submarine Technology Revolutionizes Naval Warfare',
+      category: 'Sea World',
+      excerpt: 'New stealth submarine capabilities enable unprecedented underwater operations.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Submarine&font=roboto',
+      date: 'November 20, 2025',
+      readTime: '7 min read'
+    },
+    {
+      id: 16,
+      title: 'Aircraft Carrier Strike Group Deployment Strategy',
+      category: 'Sea World',
+      excerpt: 'Naval forces demonstrate power projection capabilities in strategic waters.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Aircraft+Carrier&font=roboto',
+      date: 'November 19, 2025',
+      readTime: '9 min read'
+    },
+    {
+      id: 17,
+      title: 'Naval Drone Technology: Autonomous Surface Vessels',
+      category: 'Sea World',
+      excerpt: 'Unmanned surface vehicles enhance maritime surveillance and combat capabilities.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Naval+Drones&font=roboto',
+      date: 'November 18, 2025',
+      readTime: '8 min read'
+    },
+    {
+      id: 18,
+      title: 'Maritime Security Operations in Critical Shipping Lanes',
+      category: 'Sea World',
+      excerpt: 'Naval patrols ensure safe passage through vital international waterways.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Maritime+Security&font=roboto',
+      date: 'November 17, 2025',
+      readTime: '6 min read'
+    }
+  ];
+
+  const aeroWorldNews = [
+    {
+      id: 19,
+      title: 'Hypersonic Missile Development: Strategic Implications',
+      category: 'Aero World',
+      excerpt: 'Analysis of emerging hypersonic weapons technology and its impact on global defense.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Hypersonic&font=roboto',
+      date: 'November 20, 2025',
+      readTime: '8 min read'
+    },
+    {
+      id: 20,
+      title: 'Space-Based Reconnaissance Satellites Enhance Intelligence',
+      category: 'Aero World',
+      excerpt: 'Advanced satellite systems provide real-time intelligence and surveillance capabilities.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Satellites&font=roboto',
+      date: 'November 19, 2025',
+      readTime: '7 min read'
+    },
+    {
+      id: 21,
+      title: 'Drone Swarm Technology: Coordinated Aerial Operations',
+      category: 'Aero World',
+      excerpt: 'Autonomous drone formations demonstrate advanced tactical coordination.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Drone+Swarm&font=roboto',
+      date: 'November 18, 2025',
+      readTime: '9 min read'
+    },
+    {
+      id: 22,
+      title: 'Advanced Rocket Propulsion Systems Development',
+      category: 'Aero World',
+      excerpt: 'New propulsion technologies enable faster and more efficient aerospace systems.',
+      image: 'https://placehold.co/800x600/1a202c/eab308?text=Rocket+Tech&font=roboto',
+      date: 'November 17, 2025',
+      readTime: '6 min read'
+    }
+  ];
+
   const categories = [
     { name: 'Defence Frontline', abbr: 'DF', color: 'from-blue-600 to-blue-800' },
     { name: 'Cosmic Trail', abbr: 'CT', color: 'from-purple-600 to-purple-800' },
@@ -111,9 +228,9 @@ const Home = () => {
       <section className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6 md:py-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-            {/* Main Featured Article */}
+            {/* Main Featured Article - Left Side */}
             <div className="relative group cursor-pointer">
-              <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden rounded-lg">
+              <div className="relative h-64 sm:h-80 lg:h-full overflow-hidden rounded-lg">
                 <img
                   src={featuredNews[0].image}
                   alt={featuredNews[0].title}
@@ -141,34 +258,66 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Secondary Featured Articles */}
-            <div className="grid grid-cols-1 gap-4 sm:gap-6">
-              {featuredNews.slice(1, 3).map((article) => (
-                <article key={article.id} className="group cursor-pointer">
-                  <div className="flex gap-3 sm:gap-4 bg-white hover:bg-gray-50 transition-colors rounded-lg overflow-hidden border border-gray-200">
-                    <div className="relative w-32 sm:w-40 md:w-48 h-28 sm:h-32 flex-shrink-0 overflow-hidden">
-                      <img
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="flex-1 py-2 sm:py-3 pr-3 sm:pr-4">
-                      <span className="inline-block text-xs font-semibold text-gold-600 mb-1 sm:mb-2">
-                        {article.category}
-                      </span>
-                      <h3 className="text-sm sm:text-base lg:text-lg font-bold text-navy-900 mb-1 sm:mb-2 line-clamp-2 group-hover:text-gold-600 transition">
-                        {article.title}
-                      </h3>
-                      <div className="flex items-center text-xs text-gray-500">
-                        <span>{article.date}</span>
-                        <span className="mx-2">•</span>
-                        <span className="hidden sm:inline">{article.readTime}</span>
+            {/* Right Side - Top 2 Articles + Bottom 1 Article */}
+            <div className="flex flex-col gap-4 lg:gap-6">
+              {/* Top 2 Small Articles Side by Side */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {featuredNews.slice(1, 3).map((article) => (
+                  <article key={article.id} className="group cursor-pointer">
+                    <div className="bg-navy-900 hover:bg-navy-800 transition-colors rounded-lg overflow-hidden h-full">
+                      <div className="relative h-32 sm:h-36 overflow-hidden">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className="absolute top-2 left-2 bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-bold">
+                          {article.category}
+                        </span>
+                      </div>
+                      <div className="p-3 sm:p-4">
+                        <h3 className="text-sm sm:text-base font-bold text-white mb-2 line-clamp-2 group-hover:text-gold-400 transition">
+                          {article.title}
+                        </h3>
+                        <div className="flex items-center text-xs text-gray-400">
+                          <span>{article.date}</span>
+                          <span className="mx-2">•</span>
+                          <span>{article.readTime}</span>
+                        </div>
                       </div>
                     </div>
+                  </article>
+                ))}
+              </div>
+
+              {/* Bottom 1 Medium Article */}
+              <article className="group cursor-pointer flex-1">
+                <div className="flex gap-4 bg-white hover:bg-gray-50 transition-colors rounded-lg overflow-hidden border border-gray-200 h-full">
+                  <div className="relative w-40 sm:w-48 lg:w-56 flex-shrink-0 overflow-hidden">
+                    <img
+                      src={featuredNews[3].image}
+                      alt={featuredNews[3].title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
-                </article>
-              ))}
+                  <div className="flex-1 py-4 pr-4 flex flex-col justify-center">
+                    <span className="inline-block text-xs font-semibold text-gold-600 mb-2">
+                      {featuredNews[3].category}
+                    </span>
+                    <h3 className="text-base sm:text-lg lg:text-xl font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition">
+                      {featuredNews[3].title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-3 line-clamp-2 hidden sm:block">
+                      {featuredNews[3].excerpt}
+                    </p>
+                    <div className="flex items-center text-xs text-gray-500">
+                      <span>{featuredNews[3].date}</span>
+                      <span className="mx-2">•</span>
+                      <span>{featuredNews[3].readTime}</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -184,37 +333,217 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-          {featuredNews.slice(0, 6).map((article) => (
-            <article key={article.id} className="bg-white rounded-lg sm:rounded-xl shadow-md hover:shadow-2xl transition-shadow duration-300 group overflow-hidden">
-              <div className="relative h-48 sm:h-56 md:h-64 overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          {featuredNews.slice(0, 8).map((article) => (
+            <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-3 left-3 sm:top-4 sm:left-4">
-                  <span className="bg-gold-600 text-navy-900 px-2 py-1 sm:px-3 rounded text-xs sm:text-sm font-semibold">
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
                     {article.category}
                   </span>
                 </div>
               </div>
-              <div className="p-4 sm:p-5 md:p-6">
-                <div className="flex items-center text-xs sm:text-sm text-gray-500 mb-2 sm:mb-3">
+              <div className="p-4">
+                <div className="flex items-center text-xs text-gray-500 mb-2">
                   <span className="truncate">{article.date}</span>
                   <span className="mx-2">•</span>
-                  <span className="hidden sm:inline">{article.readTime}</span>
+                  <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-base sm:text-lg md:text-xl font-bold text-navy-900 mb-2 sm:mb-3 line-clamp-2 group-hover:text-gold-600 transition">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
                   {article.title}
                 </h3>
-                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">{article.excerpt}</p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <Link
                   to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base"
+                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
                   Read More
-                  <ChevronRightIcon className="ml-1 h-4 w-4" />
+                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Latest Updates */}
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-6 sm:mb-8">Latest Updates</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          {latestNews.map((article) => (
+            <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                    {article.category}
+                  </span>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="text-xs text-gray-500 mb-2">{article.date}</div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                  {article.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
+                <Link
+                  to={`/article/${article.id}`}
+                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                >
+                  Read More
+                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Air World Section */}
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Air World</h2>
+          <Link to="/category/air-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+            View All
+            <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          {airWorldNews.map((article) => (
+            <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                    {article.category}
+                  </span>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center text-xs text-gray-500 mb-2">
+                  <span className="truncate">{article.date}</span>
+                  <span className="mx-2">•</span>
+                  <span>{article.readTime}</span>
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                  {article.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
+                <Link
+                  to={`/article/${article.id}`}
+                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                >
+                  Read More
+                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Sea World Section */}
+      <section className="bg-gray-100 py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Sea World</h2>
+            <Link to="/category/sea-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+              View All
+              <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+            {seaWorldNews.map((article) => (
+              <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+                <div className="relative h-44 sm:h-48 overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                    <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                      {article.category}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <div className="flex items-center text-xs text-gray-500 mb-2">
+                    <span className="truncate">{article.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{article.readTime}</span>
+                  </div>
+                  <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                    {article.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
+                  <Link
+                    to={`/article/${article.id}`}
+                    className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                  >
+                    Read More
+                    <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
+                  </Link>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Aero World Section */}
+      <section className="container mx-auto px-4 py-12 md:py-16">
+        <div className="flex justify-between items-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900">Aero World</h2>
+          <Link to="/category/aero-world" className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-sm sm:text-base">
+            View All
+            <ChevronRightIcon className="ml-1 h-4 w-4 sm:h-5 sm:w-5" />
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+          {aeroWorldNews.map((article) => (
+            <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
+                    {article.category}
+                  </span>
+                </div>
+              </div>
+              <div className="p-4">
+                <div className="flex items-center text-xs text-gray-500 mb-2">
+                  <span className="truncate">{article.date}</span>
+                  <span className="mx-2">•</span>
+                  <span>{article.readTime}</span>
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
+                  {article.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
+                <Link
+                  to={`/article/${article.id}`}
+                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
+                >
+                  Read More
+                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                 </Link>
               </div>
             </article>
@@ -242,43 +571,6 @@ const Home = () => {
               </Link>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Latest Updates */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-navy-900 mb-6 sm:mb-8">Latest Updates</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
-          {latestNews.map((article) => (
-            <article key={article.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 group">
-              <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
-                  <span className="bg-navy-900 text-white px-2 py-1 rounded text-xs font-semibold">
-                    {article.category}
-                  </span>
-                </div>
-              </div>
-              <div className="p-4 sm:p-5">
-                <div className="text-xs sm:text-sm text-gray-500 mb-2">{article.date}</div>
-                <h3 className="text-base sm:text-lg font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition">
-                  {article.title}
-                </h3>
-                <p className="text-gray-600 text-xs sm:text-sm mb-3 line-clamp-2">{article.excerpt}</p>
-                <Link
-                  to={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold text-xs sm:text-sm flex items-center"
-                >
-                  Read More
-                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
-                </Link>
-              </div>
-            </article>
-          ))}
         </div>
       </section>
     </div>
