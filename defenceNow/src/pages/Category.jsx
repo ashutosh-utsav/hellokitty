@@ -268,37 +268,37 @@ const Category = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {sampleArticles.map((article) => (
-            <article key={article.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300 group">
-              <div className="relative h-56 overflow-hidden">
+            <article key={article.id} className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 group overflow-hidden">
+              <div className="relative h-44 sm:h-48 overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4">
-                  <span className="bg-white text-navy-900 px-3 py-1 rounded-full text-xs font-semibold shadow-lg">
+                <div className="absolute top-2 left-2 sm:top-3 sm:left-3">
+                  <span className="bg-gold-600 text-navy-900 px-2 py-1 rounded text-xs font-semibold">
                     {displayName}
                   </span>
                 </div>
               </div>
-              <div className="p-6">
-                <div className="flex items-center text-sm text-gray-500 mb-3">
-                  <span>{article.date}</span>
+              <div className="p-4">
+                <div className="flex items-center text-xs text-gray-500 mb-2">
+                  <span className="truncate">{article.date}</span>
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold text-navy-900 mb-3 group-hover:text-gold-600 transition">
+                <h3 className="text-sm sm:text-base font-bold text-navy-900 mb-2 line-clamp-2 group-hover:text-gold-600 transition leading-tight">
                   {article.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{article.excerpt}</p>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 line-clamp-2">{article.excerpt}</p>
                 <a
                   href={`/article/${article.id}`}
-                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center"
+                  className="text-gold-600 hover:text-gold-700 font-semibold flex items-center text-xs sm:text-sm"
                 >
-                  Read Full Article
-                  <ChevronRightIcon className="ml-1 h-4 w-4" />
+                  Read More
+                  <ChevronRightIcon className="ml-1 h-3 w-3 sm:h-4 sm:w-4" />
                 </a>
               </div>
             </article>
