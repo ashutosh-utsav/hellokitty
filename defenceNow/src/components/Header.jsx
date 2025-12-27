@@ -17,7 +17,8 @@ const Header = () => {
     { name: 'Global Game' },
     { name: 'Think Tank' },
     { name: 'Congress' },
-    { name: 'Truth Line' }
+    { name: 'Truth Line' },
+    { name: 'Democracy' }
   ];
 
   return (
@@ -114,6 +115,9 @@ const Header = () => {
             </Link>
             <Link to="/category/truth-line" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
               Truth Line
+            </Link>
+            <Link to="/category/democracy" className="text-navy-600 hover:text-primary-500 text-[10px] xl:text-xs font-semibold transition tracking-wide uppercase">
+              Democracy
             </Link>
           </nav>
 
@@ -220,6 +224,13 @@ const Header = () => {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Truth Line
+              </Link>
+              <Link
+                to="/category/democracy"
+                className="block py-2.5 text-navy-800 hover:text-primary-600 hover:bg-primary-50 font-medium text-sm uppercase tracking-wide px-2 rounded transition"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Democracy
               </Link>
             </div>
           </div>

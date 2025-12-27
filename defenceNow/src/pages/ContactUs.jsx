@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, PhoneIcon, MapPinIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -25,45 +25,28 @@ const ContactUs = () => {
 
   const contactInfo = [
     {
-      icon: EnvelopeIcon,
-      title: 'Email',
-      details: 'contact@defencenow.com',
-      subdetails: 'editorial@defencenow.com'
-    },
-    {
       icon: PhoneIcon,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      subdetails: 'Mon-Fri 9AM-6PM EST'
+      details: '+91 96612 18504',
+      subdetails: ''
+    },
+    {
+      icon: EnvelopeIcon,
+      title: 'Email',
+      details: 'contact@defencewings.com',
+      subdetails: ''
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Website',
+      details: 'www.defencewings.com',
+      subdetails: ''
     },
     {
       icon: MapPinIcon,
-      title: 'Office',
-      details: '1234 Defence Avenue',
-      subdetails: 'Washington, DC 20001'
-    }
-  ];
-
-  const departments = [
-    {
-      title: 'Editorial Inquiries',
-      email: 'editorial@defencenow.com',
-      description: 'Story ideas, corrections, and editorial feedback'
-    },
-    {
-      title: 'Press & Media',
-      email: 'press@defencenow.com',
-      description: 'Media requests, interviews, and press releases'
-    },
-    {
-      title: 'Advertising',
-      email: 'advertising@defencenow.com',
-      description: 'Advertising opportunities and partnerships'
-    },
-    {
-      title: 'Technical Support',
-      email: 'support@defencenow.com',
-      description: 'Website issues and subscription support'
+      title: 'Address',
+      details: 'New Delhi-110024',
+      subdetails: 'India'
     }
   ];
 
@@ -83,7 +66,7 @@ const ContactUs = () => {
 
       {/* Contact Info Cards */}
       <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {contactInfo.map((info, idx) => (
             <div key={idx} className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-2xl transition-shadow duration-300">
               <div className="flex justify-center mb-4">
@@ -93,7 +76,7 @@ const ContactUs = () => {
               </div>
               <h3 className="text-xl font-bold text-navy-900 mb-2">{info.title}</h3>
               <p className="text-gray-700 font-medium mb-1">{info.details}</p>
-              <p className="text-gray-500 text-sm">{info.subdetails}</p>
+              {info.subdetails && <p className="text-gray-500 text-sm">{info.subdetails}</p>}
             </div>
           ))}
         </div>
@@ -118,7 +101,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                   />
                 </div>
                 <div>
@@ -133,7 +116,7 @@ const ContactUs = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="john@example.com"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
@@ -178,56 +161,27 @@ const ContactUs = () => {
         </div>
       </section>
 
-      {/* Departments */}
+      {/* Additional Info */}
       <section className="bg-white py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-8 sm:mb-12 text-center">Contact by Department</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
-            {departments.map((dept, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300">
-                <h3 className="text-lg font-bold text-navy-900 mb-2">{dept.title}</h3>
-                <a href={`mailto:${dept.email}`} className="text-primary-600 hover:text-primary-700 font-medium text-sm mb-3 block">
-                  {dept.email}
-                </a>
-                <p className="text-gray-600 text-sm">{dept.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="container mx-auto px-4 py-12 md:py-16">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-6 sm:mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-bold text-navy-900 mb-2">How can I submit a story tip?</h3>
-              <p className="text-gray-700">
-                Send your story tips to editorial@defencenow.com. Please include as much detail as possible, 
-                including sources and relevant documentation. All tips are treated confidentially.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-bold text-navy-900 mb-2">Do you accept guest contributions?</h3>
-              <p className="text-gray-700">
-                Yes, we welcome submissions from defence professionals, analysts, and subject matter experts. 
-                Please send your pitch or completed article to editorial@defencenow.com.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-bold text-navy-900 mb-2">How do I report an error?</h3>
-              <p className="text-gray-700">
-                We take accuracy seriously. If you've spotted an error, please email editorial@defencenow.com 
-                with the article URL and details of the correction needed.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-lg font-bold text-navy-900 mb-2">Can I republish your content?</h3>
-              <p className="text-gray-700">
-                For republishing requests, please contact press@defencenow.com. We evaluate requests on a 
-                case-by-case basis.
-              </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold text-navy-900 mb-6">Connect With Us</h2>
+            <p className="text-lg text-gray-700 mb-8">
+              Defence Wings is dedicated to delivering timely, credible, and insightful coverage of military, security, and geopolitical developments. Reach out to us for editorial inquiries, advertising opportunities, or partnership proposals.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="mailto:contact@defencewings.com"
+                className="px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-lg transition"
+              >
+                Email Us Directly
+              </a>
+              <a
+                href="/about"
+                className="px-6 py-3 border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold rounded-lg transition"
+              >
+                Learn About Us
+              </a>
             </div>
           </div>
         </div>
