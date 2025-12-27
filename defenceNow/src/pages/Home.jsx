@@ -219,7 +219,8 @@ const Home = () => {
     { name: 'Global Game', abbr: 'GG', color: 'from-indigo-600 to-indigo-800' },
     { name: 'Think Tank', abbr: 'TT', color: 'from-teal-600 to-teal-800' },
     { name: 'Congress', abbr: 'CG', color: 'from-gray-600 to-gray-800' },
-    { name: 'Truth Line', abbr: 'TL', color: 'from-emerald-600 to-emerald-800' }
+    { name: 'Truth Line', abbr: 'TL', color: 'from-emerald-600 to-emerald-800' },
+    { name: 'Democracy', abbr: 'DM', color: 'from-amber-600 to-amber-800' }
   ];
 
   return (

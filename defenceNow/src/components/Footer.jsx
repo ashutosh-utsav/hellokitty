@@ -12,7 +12,8 @@ const Footer = () => {
     'Global Game',
     'Think Tank',
     'Congress',
-    'Truth Line'
+    'Truth Line',
+    'Democracy'
   ];
 
   return (
@@ -36,8 +37,11 @@ const Footer = () => {
                 <span className="text-navy-600" style={{ color: '#021E42' }}>Wings</span>
               </div>
             </Link>
+            <p className="text-primary-600 font-semibold text-sm mb-2 italic">
+              Decoding Modern Warfare and Strategy
+            </p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Your trusted source for comprehensive defence news, geopolitical analysis, 
+              Your trusted source for comprehensive defence news, geopolitical analysis,
               and strategic insights from around the globe.
             </p>
           </div>
@@ -57,14 +61,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary-600 transition text-sm">
+                <Link to="/privacy-policy" className="text-gray-600 hover:text-primary-600 transition text-sm">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-primary-600 transition text-sm">
+                <Link to="/terms-and-conditions" className="text-gray-600 hover:text-primary-600 transition text-sm">
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

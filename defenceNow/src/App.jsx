@@ -4,6 +4,8 @@ import Home from './pages/Home';
 import Category from './pages/Category';
 import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="category/:categorySlug/:subcategorySlug" element={<Category />} />
           <Route path="about" element={<AboutUs />} />
           <Route path="contact" element={<ContactUs />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-and-conditions" element={<TermsAndConditions />} />
         </Route>
       </Routes>
     </Router>
